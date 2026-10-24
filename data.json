@@ -297,8 +297,38 @@
       "label": "Nieoficjalne archiwum odczytów TIOBE",
       "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
     },
-    "notes": "Odczyty miesięczne, oddzielne od średnich 12-miesięcznych. Wartości zaokrąglono do dwóch miejsc; zmiany wyliczono z prezentowanych wartości. Komentarz autora indeksu i kontekst technologiczny nie są dowodem przyczynowości.",
+    "notes": "Wybrane duże zmiany wskaźnika w okresach od miesiąca do kilkunastu lat; wszystkie pokazane różnice przekraczają 1 p.p. Starsze odczyty odtworzone z wykresów są przybliżone. Przyczyny rozróżniono na udokumentowane czynniki, oceny TIOBE i hipotezy.",
     "cases": [
+      {
+        "id": "python-2004",
+        "language": "python",
+        "title": "Z około 1% do 6,58% wiosną 2004 r.",
+        "from": {
+          "month": "2004-03",
+          "value": 1.01
+        },
+        "to": {
+          "month": "2004-05",
+          "value": 6.58
+        },
+        "evidence": "Hipoteza: wpływ wyników Google",
+        "explanation": "Ten skok przypada na zmianę wyników Google w kwietniu 2004. TIOBE wyjaśniało w swoim FAQ, że usuwanie sztucznie promowanych stron mocno obniżyło odczyty Javy i C++; później dołączono MSN i Yahoo, aby ograniczyć takie wahania. Przesunięcie względnych udziałów po tej zmianie jest wiarygodnym wyjaśnieniem części nagłego wzrostu Pythona.",
+        "limit": "FAQ nie wylicza wpływu na Pythona. Odczyty wskazują rok 2004, nie 2003; Python 2.4 ukazał się dopiero w listopadzie 2004, więc jego premiera nie tłumaczy wiosennego skoku.",
+        "sources": [
+          {
+            "label": "Archiwum odczytów miesięcznych",
+            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
+          },
+          {
+            "label": "FAQ TIOBE — kopia z II 2015, s. 5",
+            "url": "https://stefanch.com/wp-content/uploads/2015/02/Tiobe-Index-2015-02-21.pdf#page=5"
+          },
+          {
+            "label": "Python 2.4 — data wydania",
+            "url": "https://www.python.org/download/releases/2.4/"
+          }
+        ]
+      },
       {
         "id": "python-2024",
         "language": "python",
@@ -362,18 +392,18 @@
       {
         "id": "python-2025-2026",
         "language": "python",
-        "title": "Spadek po szczycie z lipca 2025 r.",
+        "title": "Spadek o ponad 9 p.p. od szczytu z lipca 2025 r.",
         "from": {
           "month": "2025-07",
           "value": 26.98
         },
         "to": {
-          "month": "2026-02",
-          "value": 21.81
+          "month": "2026-09",
+          "value": 17.76
         },
         "evidence": "Interpretacja TIOBE",
-        "explanation": "W lutym 2026 Paul Jansen wiązał spadek udziału Pythona z odzyskiwaniem zainteresowania przez bardziej wyspecjalizowane języki, szczególnie R i Perl. R konkuruje w statystyce i analizie danych, a Perl w skryptach. Wskaźnik jest względny: wzrost innych języków może zmniejszać udział lidera.",
-        "limit": "To interpretacja autora indeksu. Nie jest pomiarem migracji projektów z Pythona do R lub Perla.",
+        "explanation": "Spadek trwał również po lutym 2026, dlatego porównanie obejmuje okres aż do września. W lutym Jansen wskazywał odzyskiwanie zainteresowania przez R w statystyce i analizie danych oraz przez Perl w skryptach. To konkretne obszary konkurencji dla Pythona; TIOBE traktowało je jako możliwe czynniki zmniejszania jego przewagi.",
+        "limit": "Komentarz z lutego dotyczy wcześniejszej części spadku, nie wyjaśnia całych −9,22 p.p. Nie obejmujemy tu października 2026, dla którego wskazano zmianę metodologii.",
         "sources": [
           {
             "label": "Archiwum odczytów",
@@ -382,6 +412,66 @@
           {
             "label": "TIOBE II 2026 — zachowany komentarz",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings#february-2026-domain-specific-languages-challenge-pythons-lead"
+          }
+        ]
+      },
+      {
+        "id": "cpp-2003-2007",
+        "language": "cpp",
+        "title": "Utrata ponad połowy wskaźnika w latach 2003–2007",
+        "from": {
+          "month": "2003-08",
+          "value": 17.53
+        },
+        "to": {
+          "month": "2007-12",
+          "value": 7.87
+        },
+        "evidence": "Komentarz TIOBE i zmiana pomiaru",
+        "explanation": "Na ten okres nakładają się dwa różne zjawiska. W kwietniu 2004 zmiana wyników Google obniżyła odczyty C++ — potwierdza to FAQ TIOBE. We wrześniu 2007 Paul Jansen wskazywał natomiast, że firmy pracujące w Visual Studio wybierają C# zamiast C++ do nowych projektów. C# upraszczał budowę aplikacji dzięki środowisku .NET i automatycznemu zarządzaniu pamięcią.",
+        "limit": "Jansen opisywał swoją ocenę rynku, nie zmierzoną skalę migracji. Zmiana Google tłumaczy zaburzenie z 2004, a nie cały czteroletni spadek o 9,66 p.p.",
+        "sources": [
+          {
+            "label": "Archiwum odczytów miesięcznych",
+            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
+          },
+          {
+            "label": "FAQ TIOBE — kopia z II 2015, s. 5",
+            "url": "https://stefanch.com/wp-content/uploads/2015/02/Tiobe-Index-2015-02-21.pdf#page=5"
+          },
+          {
+            "label": "Komentarz TIOBE IX 2007 — zachowana kopia",
+            "url": "https://www.production.dijitalders.com/icerik/131/337/programlama_dili_istatistikleri.html"
+          },
+          {
+            "label": "Badanie trendów w 2005 — autorzy ankiety",
+            "url": "https://www.infoworld.com/article/2221907/2005-survey-spots-trends-in-software-development.html"
+          }
+        ]
+      },
+      {
+        "id": "cpp-2014-2015",
+        "language": "cpp",
+        "title": "Odbicie o niemal 4 p.p. w dziesięć miesięcy",
+        "from": {
+          "month": "2014-09",
+          "value": 4.67
+        },
+        "to": {
+          "month": "2015-07",
+          "value": 8.64
+        },
+        "evidence": "Hipoteza autorów TIOBE",
+        "explanation": "W lipcu 2015 TIOBE wiązało odbicie przede wszystkim z upowszechnieniem C++11. Nowy standard wprowadził m.in. lambdy, semantykę przenoszenia i wygodniejsze narzędzia biblioteki standardowej. Modernizacja ułatwiała pisanie kodu bez rezygnowania z kontroli wydajności i zasobów — istotnej przewagi C++ w istniejących systemach.",
+        "limit": "To wyjaśnienie zaproponowane przez TIOBE. Standard pochodzi z 2011 r.; wskazanym mechanizmem była jego późniejsza adopcja, a nie nowa premiera w 2015.",
+        "sources": [
+          {
+            "label": "Archiwum odczytów miesięcznych",
+            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
+          },
+          {
+            "label": "TIOBE VII 2015 — oryginalny raport w kopii PDF",
+            "url": "https://img.sauf.ca/pictures/2015-07-27/f109ffcf27985b226a4053d0f4cb716d.pdf"
           }
         ]
       },
@@ -416,78 +506,65 @@
         ]
       },
       {
-        "id": "cpp-june-2024",
-        "language": "cpp",
-        "title": "Awans na drugie miejsce w czerwcu 2024 r.",
+        "id": "java-2014-2016",
+        "language": "java",
+        "title": "Wzrost o niemal 8 p.p.: Android i Java 8",
         "from": {
-          "month": "2024-05",
-          "value": 9.53,
-          "rank": 3
+          "month": "2014-10",
+          "value": 13.51
         },
         "to": {
-          "month": "2024-06",
-          "value": 10.03,
-          "rank": 2
+          "month": "2016-01",
+          "value": 21.47
         },
-        "evidence": "Zmiana układu rankingu",
-        "explanation": "Awans wynikał z dwóch równoczesnych ruchów: C++ zyskał 0,50 p.p., a C spadł z 9,98% do 9,23%. Dzięki temu C++ znalazł się przed C. Nie trzeba wzrostu o kilka punktów, aby zmieniła się kolejność, jeśli wyniki języków są zbliżone.",
-        "limit": "To wyjaśnienie arytmetyki awansu, nie dowód na nagły wzrost liczby użytkowników C++ w jednym miesiącu.",
+        "evidence": "Wyjaśnienia autorów TIOBE",
+        "explanation": "W kwietniu 2015 TIOBE wskazywało popyt na programowanie Androida jako główny czynnik odbicia Javy. Pod koniec roku Jansen wskazywał także adopcję Javy 8: lambdy i strumienie ułatwiały przetwarzanie danych i zbliżały język do stylu funkcyjnego. W podsumowaniu 2015 autorzy indeksu wymieniali Androida, backend biznesowy i nowe funkcje języka.",
+        "limit": "Wzrost nie był przypisany jednej aktualizacji. Wczesne odbicie TIOBE łączyło z Androidem; znaczenie Javy 8 podkreślało w późniejszych komentarzach.",
         "sources": [
           {
-            "label": "Odczyty C i C++ — V–VI 2024",
+            "label": "Archiwum odczytów miesięcznych",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
+          },
+          {
+            "label": "Wypowiedź Jansena — IV 2015",
+            "url": "https://www.infoworld.com/article/2237727/java-regains-spot-as-most-popular-language-in-developer-index.html"
+          },
+          {
+            "label": "Wypowiedź Jansena — XI 2015",
+            "url": "https://www.infoworld.com/article/2240935/java-shines-brightest-in-language-popularity.html"
+          },
+          {
+            "label": "Komentarz TIOBE podsumowujący 2015",
+            "url": "https://adtmag.com/blogs/watersworks/2016/01/java-2015.aspx?p=1"
           }
         ]
       },
       {
-        "id": "java-2016",
+        "id": "java-2016-2017",
         "language": "java",
-        "title": "Spadek w rocznym oknie 2016–2017",
+        "title": "Spadek o 8,51 p.p. po szczycie z 2016 r.",
         "from": {
           "month": "2016-01",
           "value": 21.47
         },
         "to": {
-          "month": "2017-01",
-          "value": 17.28
-        },
-        "evidence": "Interpretacja trendu",
-        "explanation": "W 2017 r. autorzy TIOBE opisywali coraz większe rozdrobnienie rynku i rosnący udział aplikacji pisanych w kilku językach. Oznaczało to, że dawni liderzy dzielili zainteresowanie z większą liczbą technologii. Taki mechanizm jest zgodny ze spadkiem względnego udziału Javy.",
-        "limit": "Dla tego okresu dane pokazują około −4,19 p.p., a nie −10 p.p. Nie potwierdzają masowego porzucenia Javy w ciągu roku.",
-        "sources": [
-          {
-            "label": "Archiwum odczytów I 2016 i I 2017",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
-          },
-          {
-            "label": "Wypowiedzi Paula Jansena — IX 2017",
-            "url": "https://www.infoworld.com/article/2255789/why-python-and-c-cant-displace-java-c-or-c.html"
-          }
-        ]
-      },
-      {
-        "id": "java-august-2017",
-        "language": "java",
-        "title": "Ponad 6 p.p. mniej rok do roku",
-        "from": {
-          "month": "2016-08",
-          "value": 19.01
-        },
-        "to": {
           "month": "2017-08",
-          "value": 12.96,
-          "rank": 1
+          "value": 12.96
         },
-        "evidence": "Wypowiedź autora indeksu",
-        "explanation": "W sierpniu 2017 spadki obejmowały również C. Wspólnym tłem było zwiększanie liczby języków konkurujących o uwagę programistów. Java nadal zajmowała pierwsze miejsce, mimo niższego wskaźnika — zmniejszenie przewagi procentowej nie musi oznaczać utraty pozycji.",
-        "limit": "Oryginalny odczyt z VIII 2017 wynosił 12,961%; w zestawieniu jest zaokrąglony do 12,96%.",
+        "evidence": "Hipoteza autora indeksu",
+        "explanation": "Po wzroście związanym z Androidem i Javą 8 wynik Javy wyraźnie się cofnął. W 2017 Jansen tłumaczył osłabienie dominujących języków rosnącą liczbą technologii i aplikacji łączących kilka języków. To mogło odbierać Javie część udziału w zainteresowaniu programistów. Równoczesny spadek C wskazuje, że zjawisko nie dotyczyło wyłącznie Javy.",
+        "limit": "Rozdrobnienie to hipoteza TIOBE; dostępne źródła nie identyfikują jednego wydarzenia odpowiedzialnego za pełne −8,51 p.p. Nie jest to pomiar liczby usuniętych aplikacji.",
         "sources": [
           {
-            "label": "Archiwum odczytów",
+            "label": "Archiwum odczytów miesięcznych",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
           },
           {
-            "label": "Raport i wypowiedź Paula Jansena — VIII 2017",
+            "label": "Wypowiedź Jansena — IX 2017",
+            "url": "https://www.infoworld.com/article/2255789/why-python-and-c-cant-displace-java-c-or-c.html"
+          },
+          {
+            "label": "Odczyt i komentarz — VIII 2017",
             "url": "https://www.infoworld.com/article/2254773/java-and-c-hit-all-time-lows-in-tiobe-language-popularity-index.html"
           }
         ]
@@ -517,167 +594,126 @@
         ]
       },
       {
-        "id": "javascript-december-2024",
+        "id": "javascript-2024-2026",
         "language": "javascript",
-        "title": "Miesięczny skok w grudniu 2024 r.",
+        "title": "Spadek o około 43% względem końca 2024 r.",
         "from": {
-          "month": "2024-11",
-          "value": 3.71
-        },
-        "to": {
           "month": "2024-12",
           "value": 4.61
         },
-        "evidence": "Przyczyna nieustalona",
-        "explanation": "W badanych źródłach brak potwierdzenia, że tę zmianę spowodowała jedna premiera lub konkretne wydarzenie. GitHub w 2024 r. odnotował wzrost konsumpcji pakietów JavaScript z npm o 15% rok do roku. Potwierdza to aktywność ekosystemu, ale nie wyjaśnia samo w sobie skoku XI–XII.",
-        "limit": "Nie przypisujemy wzrostu nowej wersji ECMAScript ani pojedynczemu frameworkowi bez danych potwierdzających taki związek.",
+        "to": {
+          "month": "2026-08",
+          "value": 2.63
+        },
+        "evidence": "Hipoteza: przejście na TypeScript",
+        "explanation": "Możliwym czynnikiem jest przenoszenie nowego kodu z JavaScriptu do TypeScriptu. GitHub opisał tę zmianę już w Octoverse 2024, a w sierpniu 2025 TypeScript został tam liderem pod względem liczby miesięcznych współtwórców. Typowanie i narzędzia do pracy nad dużymi projektami pomagają wyjaśnić tę zmianę preferencji; TypeScript nadal kompiluje się do JavaScriptu.",
+        "limit": "To uzasadniona hipoteza, nie potwierdzona przyczyna całego spadku TIOBE. GitHub mierzy aktywność w repozytoriach; niższy wskaźnik JavaScriptu nie oznacza zaniku jego ekosystemu.",
         "sources": [
           {
-            "label": "Odczyty XI–XII 2024",
+            "label": "Archiwum odczytów miesięcznych",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
           },
           {
-            "label": "GitHub Octoverse 2024 — npm",
+            "label": "GitHub Octoverse 2024 — przejście na TypeScript",
             "url": "https://github.blog/news-insights/octoverse/octoverse-2024/"
+          },
+          {
+            "label": "GitHub Octoverse 2025",
+            "url": "https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/"
           }
         ]
       },
       {
-        "id": "php-2024",
+        "id": "php-2003-2004",
         "language": "php",
-        "title": "Spadek na początku 2024 r.",
+        "title": "Wzrost z 4,49% do ponad 11% w latach 2003–2004",
         "from": {
-          "month": "2024-01",
-          "value": 1.79,
-          "rank": 7
+          "month": "2003-01",
+          "value": 4.49
         },
         "to": {
-          "month": "2024-04",
-          "value": 1.09,
-          "rank": 17
+          "month": "2004-11",
+          "value": 11.45
         },
-        "evidence": "Komentarz TIOBE",
-        "explanation": "Paul Jansen wiązał dłuższy spadek PHP z konkurencją ekosystemów webowych: Rails w Ruby, Django w Pythonie i rozwiązań opartych na JavaScripcie. Wskazywał też historyczne problemy bezpieczeństwa jako element tej ewolucji. Jednocześnie podkreślał dalszą rolę PHP w małych i średnich witrynach oraz WordPressie.",
-        "limit": "To ocena wieloletniego trendu. Nie dowodzi, że w pierwszym kwartale 2024 wystąpiła jedna awaria lub luka odpowiedzialna za cały spadek.",
+        "evidence": "Kontekst: PHP 5 i rozwój webu",
+        "explanation": "PHP rozwijało się jako język dynamicznych stron z prostym wdrożeniem na serwerze. W lipcu 2004 pojawiło się PHP 5 z Zend Engine 2 i nowym modelem obiektowym, co poszerzało możliwości budowy aplikacji. Zespół PHP potwierdził też nagrodę TIOBE za największy roczny wzrost w 2004. Są to konkretne elementy kontekstu ówczesnego zainteresowania.",
+        "limit": "PHP 5 jest prawdopodobnym czynnikiem, nie wyliczoną przyczyną +6,96 p.p. Część wzrostu nastąpiła przed premierą; porównanie obejmuje także zaburzenie wyników wyszukiwania z 2004.",
         "sources": [
           {
-            "label": "Odczyty I–IV 2024",
+            "label": "Archiwum odczytów miesięcznych",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
           },
           {
-            "label": "Wypowiedź Paula Jansena — IV 2024",
+            "label": "PHP — historia PHP 5",
+            "url": "https://www.php.net/manual/en/history.php.php"
+          },
+          {
+            "label": "Zespół PHP o nagrodzie TIOBE — I 2005",
+            "url": "https://www.php.net/archive/2005.php"
+          },
+          {
+            "label": "FAQ TIOBE — kopia z II 2015, s. 5",
+            "url": "https://stefanch.com/wp-content/uploads/2015/02/Tiobe-Index-2015-02-21.pdf#page=5"
+          }
+        ]
+      },
+      {
+        "id": "php-2010-2024",
+        "language": "php",
+        "title": "Niemal 90% mniej względem początku 2010 r.",
+        "from": {
+          "month": "2010-01",
+          "value": 10.07
+        },
+        "to": {
+          "month": "2024-04",
+          "value": 1.09
+        },
+        "evidence": "Komentarz TIOBE i zmiana metodologii",
+        "explanation": "Jansen wskazywał konkurencję Rails, Django i rozwiązań JavaScript oraz historyczne problemy bezpieczeństwa PHP. To konkretne alternatywy w obszarze, w którym PHP wcześniej dominowało. Na wieloletnią różnicę wpływał też pomiar: w 2014 Jansen przypominał, że udziały zaczęto normalizować względem ponad 200 języków zamiast pierwszych 50, obniżając wyniki dawnych liderów.",
+        "limit": "−8,98 p.p. i −89,2% dotyczy lat 2010–2024. Od I 2014 (4,61%) do IV 2024 (1,09%) spadek wynosi −3,52 p.p., czyli około −76,4%. Żaden z tych wyników nie mierzy odsetka zamkniętych witryn PHP.",
+        "sources": [
+          {
+            "label": "Archiwum odczytów miesięcznych",
+            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
+          },
+          {
+            "label": "Wypowiedź Jansena o PHP — IV 2024",
             "url": "https://www.infoworld.com/article/2336734/php-sinks-in-tiobe-language-popularity-index.html"
-          }
-        ]
-      },
-      {
-        "id": "php-april-2024",
-        "language": "php",
-        "title": "Pięć miejsc niżej w jednym miesiącu",
-        "from": {
-          "month": "2024-03",
-          "value": 1.32,
-          "rank": 12
-        },
-        "to": {
-          "month": "2024-04",
-          "value": 1.09,
-          "rank": 17
-        },
-        "evidence": "Zmiana układu rankingu",
-        "explanation": "Spadek z miejsca 12. na 17. nastąpił przy zmianie wskaźnika o 0,23 p.p. W dolnej części pierwszej dwudziestki wiele języków miało zbliżone wartości. Dlatego niewielka różnica procentowa wystarczyła do wyprzedzenia PHP przez kilka technologii.",
-        "limit": "Utrata pięciu miejsc nie oznacza spadku wykorzystania PHP o 5% ani utraty pięciu punktów procentowych.",
-        "sources": [
-          {
-            "label": "Tabela III 2024",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Year2024/tiobe_index_march2024.csv"
           },
           {
-            "label": "Tabela IV 2024",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Year2024/tiobe_index_april2024.csv"
+            "label": "Jansen o rozszerzeniu podstawy obliczeń — XII 2014",
+            "url": "https://www.infoworld.com/article/2236579/r-swift-soar-in-language-popularity-in-2014.html"
           }
         ]
       },
       {
-        "id": "kotlin-android-2017",
+        "id": "kotlin-2017-2023",
         "language": "kotlin",
-        "title": "Wzrost po ogłoszeniu wsparcia Androida",
+        "title": "Od 0,09% do historycznego maksimum 1,15%",
         "from": {
-          "month": "2017-05",
-          "value": 0.12
+          "month": "2017-02",
+          "value": 0.09
         },
         "to": {
-          "month": "2017-06",
-          "value": 0.35
+          "month": "2023-11",
+          "value": 1.15
         },
-        "evidence": "Potwierdzone wydarzenie",
-        "explanation": "17 maja 2017 Google ogłosiło oficjalne wsparcie Kotlina na Androidzie. Android Studio 3.0 otrzymało obsługę języka, a Google i JetBrains zapowiedziały współpracę. Ogłoszenie dotyczyło dużego istniejącego ekosystemu i dawało programistom konkretny powód do sprawdzenia Kotlina.",
-        "limit": "Daty ogłoszenia i wzrostu są zgodne czasowo. Sam indeks nie wyodrębnia jednak wpływu komunikatu Google od innych czynników.",
+        "evidence": "Udokumentowany rozwój ekosystemu",
+        "explanation": "W maju 2017 Google ogłosiło oficjalne wsparcie Kotlina na Androidzie i obsługę w Android Studio 3.0. Kolejne lata przyniosły inwestycje w biblioteki, dokumentację i podejście Kotlin-first. W kwietniu 2023 Google podawało, że język jest używany w ponad 95% tysiąca najpopularniejszych aplikacji Androida. To konkretna droga od niszowego języka do szerokiego zastosowania na jednej dużej platformie.",
+        "limit": "Kotlin miał w sprawdzonej serii maksimum 1,15%, dlatego porównanie obejmuje niemal siedem lat. Duży wzrost względny wynika też z bardzo niskiej wartości początkowej; dane Androida nie są wskaźnikiem TIOBE.",
         "sources": [
           {
-            "label": "Archiwum odczytów V–VI 2017",
+            "label": "Archiwum odczytów miesięcznych",
             "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
           },
           {
-            "label": "Google — ogłoszenie z 17 V 2017",
+            "label": "Google — oficjalne wsparcie, V 2017",
             "url": "https://android-developers.googleblog.com/2017/05/android-announces-support-for-kotlin.html"
           },
           {
-            "label": "JetBrains — obsługa w Android Studio",
-            "url": "https://blog.jetbrains.com/kotlin/2017/05/kotlin-on-android-now-official/"
-          }
-        ]
-      },
-      {
-        "id": "kotlin-2023",
-        "language": "kotlin",
-        "title": "Powrót do pierwszej dwudziestki w 2023 r.",
-        "from": {
-          "month": "2023-04",
-          "value": 0.25
-        },
-        "to": {
-          "month": "2023-09",
-          "value": 0.9,
-          "rank": 20
-        },
-        "evidence": "Kontekst potwierdzony przez Google",
-        "explanation": "W kwietniu 2023 Google opisało inwestycje w Android Studio, biblioteki, dokumentację i podejście Kotlin-first. Podawało, że Kotlin występował w ponad 95% z tysiąca najpopularniejszych aplikacji Androida. Daje to konkretny kontekst rosnącego zainteresowania: rozwinięty ekosystem i rzeczywiste wdrożenia.",
-        "limit": "Wskaźnik dotyczący aplikacji Androida nie jest odczytem TIOBE. Nie można z niego obliczyć, jaka część +0,65 p.p. wynikała z tych inwestycji.",
-        "sources": [
-          {
-            "label": "Archiwum odczytów IV–IX 2023",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
-          },
-          {
-            "label": "Google at KotlinConf 2023",
+            "label": "Google — skala adopcji, IV 2023",
             "url": "https://developers.googleblog.com/google-at-kotlinconf-23/"
-          }
-        ]
-      },
-      {
-        "id": "kotlin-2024-2025",
-        "language": "kotlin",
-        "title": "Spadek po wzroście z 2024 r.",
-        "from": {
-          "month": "2024-08",
-          "value": 1.13
-        },
-        "to": {
-          "month": "2025-04",
-          "value": 0.74
-        },
-        "evidence": "Interpretacja TIOBE",
-        "explanation": "W kwietniu 2025 TIOBE łączyło słabsze wyniki Kotlina i Swifta z silnym powiązaniem z pojedynczymi platformami mobilnymi oraz konkurencją rozwiązań wieloplatformowych. Była to interpretacja pozycji rynkowej obu języków, nie stwierdzenie braku możliwości wieloplatformowych w Kotlinie.",
-        "limit": "Spadek zainteresowania w indeksie nie jest pomiarem liczby aplikacji na Androida ani rezygnacji z Kotlin Multiplatform.",
-        "sources": [
-          {
-            "label": "Archiwum odczytów VIII 2024–IV 2025",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings/blob/master/Tiobe_Index_All_Ratings_October2026.csv"
-          },
-          {
-            "label": "TIOBE IV 2025 — zachowany komentarz",
-            "url": "https://github.com/toUpperCase78/tiobe-index-ratings#april-2025-former-top-20-players-kotlin-ruby-and-swift-have-a-hard-time"
           }
         ]
       }

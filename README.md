@@ -4,7 +4,7 @@ Zestawienie sześciu języków programowania: Python, C++, Java, JavaScript, PHP
 
 - Ranking TIOBE z października 2026, wskaźniki procentowe i zmiany rok do roku.
 - Historyczne pozycje w latach 2005–2025 z tabelą wartości.
-- 14 skoków i spadków popularności dla sześciu języków: daty, wartości, wyjaśnienia i źródła.
+- 14 dużych zmian wskaźnika dla sześciu języków w latach 2003–2026: okresy od miesiąca do kilkunastu lat, wyjaśnienia i źródła. Każda różnica przekracza 1 p.p.
 - Wersje, trzy istotne wydania każdego języka i przykłady kodu.
 
 ## Uruchomienie

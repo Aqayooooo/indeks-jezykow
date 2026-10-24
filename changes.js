@@ -9,7 +9,8 @@
  const number=value=>value.toLocaleString('pl-PL',{minimumFractionDigits:2,maximumFractionDigits:2});
  const month=value=>new Date(`${value}-01T12:00:00Z`).toLocaleDateString('pl-PL',{month:'long',year:'numeric',timeZone:'UTC'});
  const months=(from,to)=>{const [fy,fm]=from.split('-').map(Number),[ty,tm]=to.split('-').map(Number);return (ty-fy)*12+tm-fm;};
- const period=count=>count===1?'1 miesiąc':count<5?`${count} miesiące`:`${count} miesięcy`;
+ const plural=(count,one,few,many)=>count===1?one:count%10>=2&&count%10<=4&&(count%100<12||count%100>14)?few:many;
+ const period=count=>{const years=Math.floor(count/12),rest=count%12;return [years?years+' '+plural(years,'rok','lata','lat'):'',rest?rest+' '+plural(rest,'miesiąc','miesiące','miesięcy'):''].filter(Boolean).join(' i ');};
  filters.innerHTML=languages.map(item=>`<button data-change-language="${item.id}" aria-pressed="${item.id==='python'}">${item.name}</button>`).join('');
  function render(id,updateURL=false){
   if(!languages.some(item=>item.id===id))return;
