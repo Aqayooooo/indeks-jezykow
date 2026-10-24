@@ -3,46 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1c2024">
-  <meta name="description" content="Historia popularności języków jako interaktywna mapa. Prześledź drogę Pythona, Javy, C++, JavaScriptu i PHP, porównaj ranking oraz wydania sześciu języków.">
-  <title>Indeks — języki w ruchu</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Popularność, historia i wersje sześciu języków programowania. Dane TIOBE oraz zestawienie wydań — stan na 20 października 2026.">
+  <title>Języki programowania — popularność i wersje</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="map.css?v=5">
+  <link rel="stylesheet" href="report.css?v=1">
   <script src="languages.js?v=4" defer></script>
-  <script src="map.js?v=5" defer></script>
+  <script src="report.js?v=1" defer></script>
 </head>
 <body>
-  <a class="skip" href="#explorer">Przejdź do eksploratora</a>
-  <header class="topbar">
-    <a class="wordmark" href="#historia" aria-label="Indeks — historia języków"><svg viewBox="0 0 38 32" aria-hidden="true"><path d="M3 25 15 13h9L35 2"/><path d="M3 15h10l12 12h10"/><path d="M3 4h9l23 17"/></svg><span>indeks<span class="brand-period">.</span></span></a>
-    <nav aria-label="Widoki danych"><button data-view="historia" aria-pressed="true">Mapa historii<span>01</span></button><button data-view="ranking" aria-pressed="false">Ranking 2026<span>02</span></button><button data-view="wydania" aria-pressed="false">Wydania<span>03</span></button></nav>
-    <button class="sources-trigger" id="open-sources">O danych <span>↗</span></button>
-  </header>
-  <main id="explorer">
-    <div class="page-heading"><div><h1 id="view-title">Języki w ruchu<span>.</span></h1></div><p id="view-description">Dwadzieścia lat zmian pozycji.<br>Wybierz trasę i prześledź jej historię.</p></div>
-    <section id="view-historia" class="view" aria-label="Mapa historii popularności">
-      <div class="map-layout">
-        <div class="map-main">
-          <div class="map-toolbar"><span><i class="live-dot"></i> ARCHIWUM 2005—2025</span><button id="reset-map" class="quiet-button">Pokaż wszystkie trasy <span>↺</span></button></div>
-          <div class="map-viewport"><svg id="route-map" viewBox="0 0 1000 460" role="group" aria-labelledby="map-title map-description"><title id="map-title">Zmiany pozycji języków w rankingu TIOBE</title><desc id="map-description">Każda kolorowa trasa to język, każdy punkt to jedna obserwacja. Im wyżej, tym lepsza pozycja. Wybierz punkt, aby wyświetlić szczegóły.</desc></svg></div>
-          <div class="map-caption"><span>↑ WYŻEJ = LEPSZA POZYCJA</span><span>Każdy punkt to średnia 12-miesięczna.<br>Linie łączą obserwacje co 5 lat.</span></div>
-          <div class="time-control"><button id="play-timeline" class="play-button" aria-label="Odtwórz historię" aria-pressed="false"><span aria-hidden="true">▶</span></button><div class="year-track" id="year-buttons" aria-label="Wybierz rok"></div><span class="time-label">PRZESUŃ SIĘ<br>W CZASIE</span></div>
-        </div>
-        <aside id="history-inspector" class="inspector" aria-live="polite" aria-atomic="true"></aside>
-      </div>
-      <div class="language-dock" id="history-dock" aria-label="Wybierz język na mapie"></div>
-      <div class="below-map"><p>Kotlin ma osobny profil. W archiwum 2005–2025 nie ma porównywalnej serii dla tego języka.</p><button class="text-button" id="show-history-table">Dokładne wartości <span>↗</span></button></div>
-    </section>
-    <section id="view-ranking" class="view" aria-label="Ranking październik 2026" hidden>
-      <div class="ranking-layout"><div class="ranking-board"><div class="ranking-axis"><span>POZYCJA / JĘZYK</span><span>WSKAŹNIK TIOBE</span><span>R/R W P.P.</span></div><div id="current-ranking"></div><div class="ranking-note">Długość paska odpowiada wskaźnikowi w skali 0–20%.<br>To sześć wybranych języków, nie cały ranking.</div></div><aside id="current-inspector" class="inspector" aria-live="polite"></aside></div>
-      <div class="method-strip"><span>JAK CZYTAĆ WYNIK</span><p>TIOBE mierzy zainteresowanie według swojej metodologii. Nie określa liczby projektów ani ofert pracy. Zmiana metodologii wskazana dla X 2026 ogranicza porównywalność rok do roku.</p></div>
-    </section>
-    <section id="view-wydania" class="view" aria-label="Wydania i zastosowania języków" hidden><div class="release-picker" id="release-picker" aria-label="Wybierz język"></div><div id="release-content" aria-live="polite"></div></section>
-    <div class="bottom-note"><span>ŹRÓDŁO DANYCH / TIOBE + DOKUMENTACJA JĘZYKÓW</span><span>STAN ZESTAWIENIA: 20.10.2026 <i></i> ZAPIS ARCHIWALNY</span></div>
-    <section class="reading-room" aria-labelledby="reading-title"><h2 id="reading-title">Co właściwie mierzymy?</h2><div><p>TIOBE opisuje zainteresowanie językiem. Wysoka pozycja nie oznacza automatycznie większej liczby ofert pracy ani lepszego narzędzia do Twojego projektu.</p><button class="text-button" id="methodology-link">Jak powstało zestawienie <span>↗</span></button></div></section>
+  <a class="skip-link" href="#ranking">Przejdź do danych</a>
+  <header class="site-header"><div class="container header-inner"><a class="brand" href="#" aria-label="Języki programowania — początek"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span><span>Języki programowania</span></a><nav aria-label="Nawigacja"><a href="#ranking">Ranking</a><a href="#historia">Historia</a><a href="#wersje">Wersje</a><a href="#zrodla">Źródła</a></nav></div></header>
+  <main>
+    <section class="hero" aria-labelledby="page-title"><div class="hero-art" aria-hidden="true"></div><div class="container hero-inner"><div class="hero-copy"><p class="hero-date">Stan na 20 października 2026</p><h1 id="page-title">Popularność i wersje<br>języków programowania</h1><p class="hero-languages">Python, C++, Java, JavaScript, PHP i Kotlin.</p><a class="hero-link" href="#ranking">Zobacz dane <span aria-hidden="true">↓</span></a></div></div></section>
+    <section id="ranking" class="section container" aria-labelledby="ranking-title"><div class="section-heading"><div><h2 id="ranking-title">Ranking popularności</h2><p>TIOBE Index · październik 2026</p></div><a class="subtle-link" href="data.json" download="jezyki-dane-2026.json">Pobierz dane <span aria-hidden="true">↓</span></a></div><div class="table-scroll ranking-scroll"><table class="ranking-table"><caption class="sr-only">Sześć wybranych języków w indeksie TIOBE. Zmiana rok do roku w punktach procentowych.</caption><thead><tr><th scope="col" class="rank-col">Pozycja</th><th scope="col">Język</th><th scope="col" class="bar-col"><span class="sr-only">Wykres w skali od 0 do 20 procent</span></th><th scope="col" class="numeric">Wskaźnik</th><th scope="col" class="numeric">Zmiana r/r</th><th scope="col" class="version-col">Wersja / standard</th></tr></thead><tbody id="ranking-body"></tbody></table></div><p class="table-note">Zmiana w punktach procentowych względem X 2025. TIOBE mierzy zainteresowanie językiem, nie liczbę projektów ani ofert pracy.</p></section>
+    <section id="historia" class="history-section" aria-labelledby="history-title"><div class="container section"><div class="section-heading"><div><h2 id="history-title">Historia pozycji</h2><p>2005–2025 · średnie 12-miesięczne</p></div><span class="section-meta">1 = najwyższa pozycja</span></div><div class="history-filters" id="history-filters" aria-label="Wyróżnij język na wykresie"></div><div class="history-chart-scroll"><svg id="history-chart" viewBox="0 0 1000 340" role="img" aria-labelledby="chart-title chart-description"><title id="chart-title">Historia pozycji w rankingu TIOBE</title><desc id="chart-description">Dokładne wartości są dostępne w tabeli pod wykresem.</desc></svg></div><div class="chart-footer"><p id="history-summary" aria-live="polite"></p><button id="toggle-history-table" class="subtle-link" aria-expanded="false" aria-controls="history-data">Tabela danych <span aria-hidden="true">+</span></button></div><div id="history-data" class="table-scroll" hidden><table class="history-table"><caption>Archiwalne zestawienie TIOBE z czerwca 2025.</caption><thead><tr><th scope="col">Język</th><th scope="col">2005</th><th scope="col">2010</th><th scope="col">2015</th><th scope="col">2020</th><th scope="col">2025</th></tr></thead><tbody id="history-body"></tbody></table></div><p class="table-note">Linie łączą pięć obserwacji, nie wszystkie wyniki roczne. Dla Kotlina brak porównywalnej serii.</p></div></section>
+    <section id="wersje" class="section container" aria-labelledby="versions-title"><div class="section-heading"><div><h2 id="versions-title">Wersje i aktualizacje</h2><p>Trzy istotne wydania każdego języka</p></div></div><div id="language-tabs" class="language-tabs" role="tablist" aria-label="Wybierz język"></div><article id="language-content" class="language-content" role="tabpanel" tabindex="0"></article></section>
+    <section id="zrodla" class="sources-section"><div class="container section"><div class="sources-layout"><div class="source-description"><h2>Źródła i metodologia</h2><p>Zestawienie archiwalne ze stanem na 20.10.2026. Dane miesięczne z 2026 r. i historyczne średnie 12-miesięczne są prezentowane osobno.</p><p>Wskazana w analizie zmiana metodologii TIOBE w X 2026 ogranicza porównywalność procentów rok do roku. Standard języka nie oznacza pełnej obsługi jego funkcji przez każde środowisko.</p><a class="subtle-link" href="metodologia.md">Pełny opis metodologii <span aria-hidden="true">↗</span></a></div><div class="source-links"><a href="https://www.tiobe.com/tiobe-index/" target="_blank" rel="noopener noreferrer">TIOBE Index <span>↗</span></a><a href="https://www.python.org/doc/versions/" target="_blank" rel="noopener noreferrer">Python <span>↗</span></a><a href="https://www.php.net/" target="_blank" rel="noopener noreferrer">PHP <span>↗</span></a><a href="https://262.ecma-international.org/" target="_blank" rel="noopener noreferrer">ECMAScript <span>↗</span></a><a href="https://docs.oracle.com/en/java/javase/" target="_blank" rel="noopener noreferrer">Java SE <span>↗</span></a><a href="https://kotlinlang.org/docs/releases.html" target="_blank" rel="noopener noreferrer">Kotlin <span>↗</span></a><a href="https://www.iso.org/standard/83626.html" target="_blank" rel="noopener noreferrer">C++ / ISO <span>↗</span></a></div></div></div></section>
   </main>
-  <footer><span class="footer-wordmark">indeks.</span><span>Popularność i rozwój języków · 2005–2026</span><a href="https://github.com/Aqayooooo/indeks-jezykow" target="_blank" rel="noopener noreferrer">Repozytorium ↗</a></footer>
-  <dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="overline">INDEKS / DOKUMENTACJA</span><button id="close-dialog" aria-label="Zamknij okno">×</button></div><div id="dialog-content"></div></dialog>
-  <noscript><div class="no-script">Do obsługi mapy potrzebny jest JavaScript. <a href="data.json">Pobierz dane</a> lub <a href="metodologia.md">przeczytaj opis źródeł</a>.</div></noscript>
+  <footer class="container site-footer"><span>Języki programowania · 2026</span><a href="https://github.com/Aqayooooo/indeks-jezykow" target="_blank" rel="noopener noreferrer">Repozytorium <span aria-hidden="true">↗</span></a></footer>
+  <noscript><p class="container">Do wyświetlenia interaktywnych danych potrzebny jest JavaScript. <a href="data.json">Pobierz dane JSON.</a></p></noscript>
 </body>
 </html>
