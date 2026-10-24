@@ -4,6 +4,7 @@ Zestawienie sześciu języków programowania: Python, C++, Java, JavaScript, PHP
 
 - Ranking TIOBE z października 2026, wskaźniki procentowe i zmiany rok do roku.
 - Historyczne pozycje w latach 2005–2025 z tabelą wartości.
+- 14 skoków i spadków popularności dla sześciu języków: daty, wartości, wyjaśnienia i źródła.
 - Wersje, trzy istotne wydania każdego języka i przykłady kodu.
 
 ## Uruchomienie
@@ -21,6 +22,8 @@ Nie jest wymagany proces budowania ani instalacja zależności.
 - `index.html` — treść i struktura
 - `report.css` — biało-szary interfejs i układ mobilny
 - `report.js` — tabele, wykres i zakładki
+- `changes-data.js` — odczyty, opisy zmian i źródła
+- `changes.js` — wybór języka i obliczanie różnic
 - `languages.js` — profile języków
 - `assets/ide-sketch.png` — szkic edytorów kodu w tle nagłówka
 - `data.json` — eksport danych
@@ -28,7 +31,7 @@ Nie jest wymagany proces budowania ani instalacja zależności.
 
 ## Dane
 
-Stan analizy: **20 października 2026 r.** Szczegóły: [metodologia.md](metodologia.md). Eksport: [data.json](data.json).
+Stan rankingu i wersji: **20 października 2026 r.** Analizę historycznych zmian sprawdzono **24 października 2026 r.** Szczegóły: [metodologia.md](metodologia.md). Eksport: [data.json](data.json).
 
 Historyczne średnie 12-miesięczne są prezentowane oddzielnie od miesięcznych wyników 2026. Dla Kotlina nie ma porównywalnej serii 2005–2025. TIOBE nie mierzy liczby ofert pracy ani projektów.
 
