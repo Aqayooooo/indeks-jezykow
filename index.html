@@ -7,9 +7,9 @@
   <meta name="description" content="Historia popularności języków jako interaktywna mapa. Prześledź drogę Pythona, Javy, C++, JavaScriptu i PHP, porównaj ranking oraz wydania sześciu języków.">
   <title>Indeks — języki w ruchu</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="map.css?v=4">
+  <link rel="stylesheet" href="map.css?v=5">
   <script src="languages.js?v=4" defer></script>
-  <script src="map.js?v=4" defer></script>
+  <script src="map.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#explorer">Przejdź do eksploratora</a>
@@ -19,7 +19,7 @@
     <button class="sources-trigger" id="open-sources">O danych <span>↗</span></button>
   </header>
   <main id="explorer">
-    <div class="page-heading"><div><p class="overline">JĘZYKI PROGRAMOWANIA / INTERAKTYWNE ZESTAWIENIE</p><h1 id="view-title">Języki w ruchu<span>.</span></h1></div><p id="view-description">Dwadzieścia lat zmian pozycji.<br>Wybierz trasę i prześledź jej historię.</p><span class="edition-label">EDYCJA<br><strong>10 / 2026</strong></span></div>
+    <div class="page-heading"><div><h1 id="view-title">Języki w ruchu<span>.</span></h1></div><p id="view-description">Dwadzieścia lat zmian pozycji.<br>Wybierz trasę i prześledź jej historię.</p></div>
     <section id="view-historia" class="view" aria-label="Mapa historii popularności">
       <div class="map-layout">
         <div class="map-main">
@@ -39,9 +39,9 @@
     </section>
     <section id="view-wydania" class="view" aria-label="Wydania i zastosowania języków" hidden><div class="release-picker" id="release-picker" aria-label="Wybierz język"></div><div id="release-content" aria-live="polite"></div></section>
     <div class="bottom-note"><span>ŹRÓDŁO DANYCH / TIOBE + DOKUMENTACJA JĘZYKÓW</span><span>STAN ZESTAWIENIA: 20.10.2026 <i></i> ZAPIS ARCHIWALNY</span></div>
-    <section class="reading-room" aria-labelledby="reading-title"><div class="reading-heading"><p class="overline">POZA RANKINGIEM</p><h2 id="reading-title">Pozycja to nie wszystko.</h2><p>Te same liczby, różne historie.<br>Spójrz na języki przez ich zastosowania.</p></div><div class="story-links"><button data-story="python"><span class="story-index">01</span><span><strong>Skąd ten awans Pythona?</strong><small>Dane, automatyzacja i biblioteki AI</small></span><span class="story-arrow">↗</span></button><button data-story="javascript"><span class="story-index">02</span><span><strong>Dlaczego web nie jest pierwszy?</strong><small>Popularność w indeksie a rzeczywiste użycie</small></span><span class="story-arrow">↗</span></button><button data-story="kotlin"><span class="story-index">03</span><span><strong>Kotlin ma własne terytorium.</strong><small>Android, JVM i wspólna logika aplikacji</small></span><span class="story-arrow">↗</span></button></div></section>
+    <section class="reading-room" aria-labelledby="reading-title"><h2 id="reading-title">Co właściwie mierzymy?</h2><div><p>TIOBE opisuje zainteresowanie językiem. Wysoka pozycja nie oznacza automatycznie większej liczby ofert pracy ani lepszego narzędzia do Twojego projektu.</p><button class="text-button" id="methodology-link">Jak powstało zestawienie <span>↗</span></button></div></section>
   </main>
-  <footer><span class="footer-wordmark">indeks.</span><span>Sześć języków. Wiele sposobów na kod.</span><a href="https://github.com/Aqayooooo/indeks-jezykow" target="_blank" rel="noopener noreferrer">Repozytorium ↗</a></footer>
+  <footer><span class="footer-wordmark">indeks.</span><span>Popularność i rozwój języków · 2005–2026</span><a href="https://github.com/Aqayooooo/indeks-jezykow" target="_blank" rel="noopener noreferrer">Repozytorium ↗</a></footer>
   <dialog id="info-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="overline">INDEKS / DOKUMENTACJA</span><button id="close-dialog" aria-label="Zamknij okno">×</button></div><div id="dialog-content"></div></dialog>
   <noscript><div class="no-script">Do obsługi mapy potrzebny jest JavaScript. <a href="data.json">Pobierz dane</a> lub <a href="metodologia.md">przeczytaj opis źródeł</a>.</div></noscript>
 </body>
