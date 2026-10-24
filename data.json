@@ -1,0 +1,292 @@
+{
+  "asOf": "2026-10-20",
+  "provenance": "Archiwalna analiza popularności i wydań języków; stan na 20 października 2026. Bez aktualizacji na żywo.",
+  "historicalYears": [
+    2005,
+    2010,
+    2015,
+    2020,
+    2025
+  ],
+  "historicalMeasure": "Pozycje uśrednione w okresach 12-miesięcznych; archiwum TIOBE VI 2025",
+  "currentMeasure": "Wskaźnik TIOBE X 2026; zmiana względem X 2025 w punktach procentowych",
+  "languages": [
+    {
+      "id": "python",
+      "name": "Python",
+      "rank": 1,
+      "score": 19.23,
+      "change": -5.23,
+      "color": "#316341",
+      "history": [
+        9,
+        7,
+        7,
+        3,
+        1
+      ],
+      "version": "3.15.0",
+      "status": "WYDANIE STABILNE",
+      "born": "1991",
+      "tag": "Lider zainteresowania",
+      "context": "Rozwój analizy danych, uczenia maszynowego i automatyzacji pomógł Pythonowi wejść na szczyt. Spadek wskaźnika rok do roku nie oznacza utraty pierwszego miejsca.",
+      "description": "Od czytelnych skryptów po modele AI. Python łączy niski próg wejścia z rozbudowanym ekosystemem bibliotek. Nowsze wydania rozwijają wydajność i współbieżność.",
+      "file": "grupowanie.py",
+      "code": "from collections import Counter\n\njezyki = [\"Python\", \"Java\", \"Python\"]\nranking = Counter(jezyki)\n\nprint(ranking.most_common(1))\n# [('Python', 2)]",
+      "demoNote": "Przykład: zliczanie wystąpień. Działa również we wcześniejszych wersjach.",
+      "releases": [
+        [
+          "3.15",
+          "2026",
+          "Leniwe importy, frozendict, UTF-8",
+          "Szybszy start części aplikacji i bardziej przewidywalna obsługa tekstu.",
+          "JIT pozostaje eksperymentalny."
+        ],
+        [
+          "3.14",
+          "2025",
+          "Free-threaded, t-strings, adnotacje",
+          "Oficjalne wsparcie wariantu bez GIL i nowe możliwości przetwarzania tekstu.",
+          "Przyspieszenie zależy od aplikacji i bibliotek."
+        ],
+        [
+          "3.13",
+          "2024",
+          "Pierwszy krok do pracy bez GIL",
+          "Nowy interpreter interaktywny i początek modernizacji wydajności CPythona.",
+          "Tryb bez GIL i JIT: eksperymentalne."
+        ]
+      ]
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "rank": 3,
+      "score": 8.87,
+      "change": 0.04,
+      "color": "#46728c",
+      "history": [
+        3,
+        4,
+        4,
+        4,
+        2
+      ],
+      "version": "C++23",
+      "status": "STANDARD ISO",
+      "born": "1979–1985",
+      "tag": "Wydajność ma znaczenie",
+      "context": "Silniki gier, oprogramowanie systemowe i intensywne obliczenia utrzymują znaczenie C++. Kontrola zasobów jest jego mocną stroną; kosztem pozostaje złożoność.",
+      "description": "Kontrola pamięci i zasobów, wydajne silniki oraz systemy czasu rzeczywistego. C++23 to opublikowany standard ISO/IEC 14882:2024; C++26 jest w trakcie normalizacji.",
+      "file": "wynik.cpp",
+      "code": "#include <print>\n#include <vector>\n\nint main() {\n  std::vector<int> wyniki{9, 7, 3, 1};\n  std::println(\"Pozycja: {}\", wyniki.back());\n}",
+      "demoNote": "Przykład C++23: std::println wymaga odpowiedniego wsparcia biblioteki standardowej.",
+      "releases": [
+        [
+          "C++23",
+          "2023 / ISO 2024",
+          "expected, print, mdspan, ranges",
+          "Wygodniejsze raportowanie błędów i praca z danymi wielowymiarowymi.",
+          "Dostępność zależy od kompilatora i biblioteki."
+        ],
+        [
+          "C++20",
+          "2020",
+          "Concepts, Ranges, Coroutines, Modules",
+          "Czytelniejsze szablony i nowe możliwości programowania asynchronicznego.",
+          ""
+        ],
+        [
+          "C++17",
+          "2017",
+          "optional, variant, filesystem",
+          "Prostsza obsługa plików, wariantów danych i brakujących wartości.",
+          ""
+        ]
+      ],
+      "future": "C++26: projekt obejmuje refleksję statyczną, kontrakty i nowe biblioteki, m.in. SIMD. To rozwijany standard; wsparcie zależy od implementacji."
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "rank": 4,
+      "score": 8.41,
+      "change": 0.06,
+      "color": "#a9502d",
+      "history": [
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "version": "JDK 27",
+      "status": "25: WERSJA LTS",
+      "born": "1995",
+      "tag": "Fundament dużych systemów",
+      "context": "Przenośność JVM i ekosystem biznesowy zapewniają Javie silną pozycję. Niższe miejsce niż przed laty nie przekreśla jej roli w systemach utrzymywanych przez dekady.",
+      "description": "Backend, aplikacje biznesowe i infrastruktura JVM. Kolejne wydania skupiają się na współbieżności, bezpieczeństwie i pamięci. Java 25 pozostaje istotnym wydaniem LTS.",
+      "file": "Ranking.java",
+      "code": "import java.util.List;\n\nclass Ranking {\n  public static void main(String[] args) {\n    var jezyki = List.of(\"Python\", \"Java\");\n    jezyki.forEach(System.out::println);\n  }\n}",
+      "demoNote": "Przykład: przetwarzanie kolekcji. Działa także na wcześniejszych JDK.",
+      "releases": [
+        [
+          "Java 27",
+          "2026",
+          "TLS 1.3, kompaktowe nagłówki",
+          "Postkwantowa wymiana kluczy i mniejsze zużycie pamięci.",
+          "Structured Concurrency: Preview."
+        ],
+        [
+          "Java 26",
+          "2026",
+          "HTTP/3, G1 i pamięć podręczna AOT",
+          "Nowoczesna komunikacja sieciowa oraz usprawnienia uruchamiania aplikacji.",
+          "Część API ma status Preview lub Incubator."
+        ],
+        [
+          "Java 25",
+          "2025 · LTS",
+          "Prostsze main i konstruktory",
+          "Mniej kodu pomocniczego, importowanie modułów i łatwiejszy start nauki.",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "rank": 6,
+      "score": 2.77,
+      "change": -0.64,
+      "color": "#8c762a",
+      "history": [
+        11,
+        9,
+        8,
+        7,
+        6
+      ],
+      "version": "ES2026",
+      "status": "ECMASCRIPT · EDYCJA 17",
+      "born": "1995",
+      "tag": "Język interaktywnego webu",
+      "context": "Od przeglądarki po Node.js: JavaScript obsługuje interaktywność stron i aplikacji. TIOBE nie mierzy liczby witryn, a TypeScript jest klasyfikowany osobno.",
+      "description": "Interfejsy w przeglądarce i aplikacje serwerowe. Coroczne standardy upraszczają pracę z kolekcjami, asynchronicznością i danymi binarnymi.",
+      "file": "grupowanie.js",
+      "code": "const jezyki = [\n  { nazwa: \"JavaScript\", obszar: \"web\" },\n  { nazwa: \"PHP\", obszar: \"web\" },\n  { nazwa: \"Python\", obszar: \"dane\" }\n];\nconst grupy = Object.groupBy(\n  jezyki, jezyk => jezyk.obszar\n);",
+      "demoNote": "Przykład ES2024: Object.groupBy(). Sprawdź wsparcie docelowego środowiska.",
+      "releases": [
+        [
+          "ES2026",
+          "2026",
+          "fromAsync, sumPrecise, isError",
+          "Łatwiejsza praca z danymi asynchronicznymi, obliczeniami i Base64/hex.",
+          "Zatwierdzenie standardu nie oznacza wsparcia w każdej przeglądarce."
+        ],
+        [
+          "ES2025",
+          "2025",
+          "Iteratory, Set, Promise.try",
+          "Prostsze kolekcje, operacje asynchroniczne i RegExp.escape().",
+          ""
+        ],
+        [
+          "ES2024",
+          "2024",
+          "groupBy i withResolvers",
+          "Wygodniejsze grupowanie danych, Promise i bufory o zmiennym rozmiarze.",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "rank": 12,
+      "score": 1.26,
+      "change": -0.12,
+      "color": "#777098",
+      "history": [
+        5,
+        3,
+        6,
+        8,
+        12
+      ],
+      "version": "8.5.11",
+      "status": "8.6: RELEASE CANDIDATE",
+      "born": "1994–1995",
+      "tag": "Niżej w indeksie, nadal w webie",
+      "context": "PHP napędza systemy CMS i aplikacje internetowe. Konkurencja technologii backendowych pomaga wyjaśnić spadek zainteresowania, lecz nie dowodzi zaniku jego wykorzystania.",
+      "description": "Dynamiczne strony, CMS-y i aplikacje backendowe. PHP 8.x rozwija kontrolę typów oraz programowanie obiektowe, ułatwiając utrzymanie większych projektów.",
+      "file": "walidacja.php",
+      "code": "<?php\n\n$dane = '{\"jezyk\":\"PHP\",\"miejsce\":12}';\n\nif (json_validate($dane)) {\n    echo \"Poprawny dokument JSON\";\n}",
+      "demoNote": "Przykład PHP 8.3+: walidacja JSON bez tworzenia struktury obiektów.",
+      "releases": [
+        [
+          "8.5",
+          "2025",
+          "Operator |> i rozszerzenie URI",
+          "Czytelniejsze przekształcanie danych, obsługa URL i modyfikowanie właściwości przy klonowaniu.",
+          "PHP 8.6 RC to wydanie testowe."
+        ],
+        [
+          "8.4",
+          "2024",
+          "Property hooks i nowe API DOM",
+          "Mniej metod pomocniczych w klasach, asymetryczna widoczność i obsługa HTML5.",
+          ""
+        ],
+        [
+          "8.3",
+          "2023",
+          "Typowane stałe i json_validate",
+          "Silniejsza kontrola typów, atrybut Override i prostsza walidacja JSON.",
+          ""
+        ]
+      ]
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "rank": 32,
+      "score": 0.48,
+      "change": null,
+      "color": "#ab6876",
+      "history": null,
+      "version": "2.4.21",
+      "status": "POPRAWKI LINII 2.4",
+      "born": "2010–2016",
+      "tag": "Siła konkretnego ekosystemu",
+      "context": "Android, JVM i Kotlin Multiplatform to jego główne obszary. Mniejszy wskaźnik ogólnego zainteresowania nie oddaje w pełni znaczenia języka w aplikacjach mobilnych.",
+      "description": "Zwięzła składnia, bezpieczeństwo null i współpraca z Javą. Kotlin Multiplatform pozwala współdzielić logikę między platformami. Wersja 2.4.21 zawiera poprawki linii 2.4.",
+      "file": "Ranking.kt",
+      "code": "data class Jezyk(\n    val nazwa: String,\n    val miejsce: Int\n)\n\nfun main() {\n    val jezyk = Jezyk(\"Kotlin\", 32)\n    println(\"${jezyk.nazwa}: #${jezyk.miejsce}\")\n}",
+      "demoNote": "Przykład: klasa danych i interpolacja tekstu. Bez funkcji eksperymentalnych.",
+      "releases": [
+        [
+          "2.4",
+          "2026",
+          "Parametry kontekstowe i UUID",
+          "Stabilne API UUID, jawne pola właściwości i integracja z Javą 26.",
+          ""
+        ],
+        [
+          "2.3",
+          "2025",
+          "Pola właściwości i integracja Swift",
+          "Rozwój interoperacyjności oraz kontroli niewykorzystanych wyników funkcji.",
+          "Sprawdzanie niewykorzystanych wyników: eksperymentalne."
+        ],
+        [
+          "2.2",
+          "2025",
+          "Guard w when, Base64, HexFormat",
+          "Czytelniejsza logika warunkowa oraz nowe możliwości break i continue.",
+          ""
+        ]
+      ]
+    }
+  ]
+}
