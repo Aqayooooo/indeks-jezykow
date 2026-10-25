@@ -78,5 +78,6 @@ Kontekst historyczny jest interpretacją zmian w technologii, a nie dowodem przy
 - [Java SE: dokumentacja](https://docs.oracle.com/en/java/javase/)
 - [Kotlin: historia wydań](https://kotlinlang.org/docs/releases.html)
 - [C++: ISO/IEC 14882](https://www.iso.org/standard/83626.html)
+- [C++26: WG21 P2996R13 — refleksja statyczna i operator ^^](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2996r13.html)
 
 Ranking i wersje zostały przeniesione z analizy źródłowej. Historyczne przypadki w sekcji „Skoki i spadki” zweryfikowano osobno według źródeł wskazanych powyżej.

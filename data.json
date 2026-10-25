@@ -104,7 +104,7 @@
           ""
         ]
       ],
-      "future": "C++26: projekt obejmuje refleksję statyczną, kontrakty i nowe biblioteki, m.in. SIMD. To rozwijany standard; wsparcie zależy od implementacji."
+      "future": "C++26 (projekt standardu): dodano operator ^^ do refleksji statycznej. Np. ^^int zwraca opis typu int jako std::meta::info. W czasie kompilacji można analizować typy, pola struktur i ich nazwy, co ułatwia automatyczne wypisywanie danych oraz serializację, np. do JSON. Projekt obejmuje też kontrakty i SIMD; dostępność funkcji zależy od kompilatora."
     },
     {
       "id": "java",
