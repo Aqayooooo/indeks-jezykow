@@ -20,12 +20,11 @@ Nie jest wymagany proces budowania ani instalacja zależności.
 ## Pliki
 
 - `index.html` — treść i struktura
-- `report.css` — biało-szary interfejs i układ mobilny
+- `report.css` — podstawowe style strony, tabel i przycisków
 - `report.js` — tabele, wykres i zakładki
 - `changes-data.js` — odczyty, opisy zmian i źródła
 - `changes.js` — wybór języka i obliczanie różnic
 - `languages.js` — profile języków
-- `assets/ide-sketch.png` — szkic edytorów kodu w tle nagłówka
 - `data.json` — eksport danych
 - `metodologia.md` — źródła i ograniczenia pomiarów
 
